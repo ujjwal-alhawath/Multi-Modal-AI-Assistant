@@ -15,7 +15,7 @@ function Navbar({ setImgPreview }) {
         setImgPreview(null)
         setPopUP(false)
       }}>
-        Smart AI Bot
+        Fusion<span className="logo-gradient">AI</span>
       </div>
     </nav>
   )

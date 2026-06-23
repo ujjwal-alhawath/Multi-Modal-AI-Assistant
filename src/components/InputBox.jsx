@@ -25,7 +25,7 @@ function InputBox({ imgPreview, handleSubmit, handleGenerateImg }) {
         }
       }
     }}>
-      {imgPreview && <img src={imgPreview} alt="" id="im" />}
+
 
       {popUp ? (
         <div className="pop-up">
@@ -52,12 +52,15 @@ function InputBox({ imgPreview, handleSubmit, handleGenerateImg }) {
       }}>
         {feature === "genimg" ? <RiImageAiLine id="genImg" /> : <FiPlus />}
       </div>
-      <input
-        type="text"
-        placeholder='Ask Something...'
-        onChange={(e) => setInput(e.target.value)}
-        value={input}
-      />
+      <div className="input-field-wrapper">
+        {imgPreview && <img src={imgPreview} alt="" id="im" />}
+        <input
+          type="text"
+          placeholder='Ask Something...'
+          onChange={(e) => setInput(e.target.value)}
+          value={input}
+        />
+      </div>
       {input ? (
         <button id="submit">
           <FaArrowUpLong />
